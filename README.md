@@ -1,6 +1,6 @@
 # StageOfLightManifest
 
-This repository contains a general version of the `manifest.json` file to install the necessary Unity packages for **extOSC** and **KlakSpout** using scoped registries.
+This repository contains a general version of the `manifest.json` file to install the necessary Unity packages for **extOSC** and **KlakSpout** using scoped registries. These packages are specifically used for **Stage of Light**, a 360 projection room at the **NTNU Fine Art Museum**.
 
 ## Installation Instructions
 
