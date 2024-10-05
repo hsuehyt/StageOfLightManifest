@@ -2,6 +2,10 @@
 
 This repository contains a general version of the `manifest.json` file to install the necessary Unity packages for **extOSC** and **KlakSpout** using scoped registries. These packages are specifically used for **Stage of Light**, a 360 projection room at the **NTNU Fine Art Museum**.
 
+## Recommended Unity Version
+
+For optimal performance and compatibility, it is recommended to use **Unity 2021.3 LTS** or higher when running both **extOSC** and **KlakSpout**. These packages rely on newer features and updates in the Unity engine, and using the Long Term Support (LTS) version ensures better stability for production environments.
+
 ## Installation Instructions
 
 ### Step 1: Update Your `manifest.json`
