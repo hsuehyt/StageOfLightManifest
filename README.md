@@ -81,16 +81,24 @@ Once you have updated and saved the `manifest.json` file, restart Unity. The Pac
 
 ### Step 3: Verify Installation
 
+The Package Manager window under **Project Settings** may already be open after restarting the project for your verification, or you can open it manually.
+
 1. Go to **Edit > Project Settings > Package Manager**.
 2. Under **Scoped Registries**, verify that both **Keijiro** and **package.openupm.com** are listed.
 
 You should see something like this:
 
-![My Registries](https://github.com/hsuehyt/StageOfLightManifest/blob/main/Snapshots/My%20Registries.png)
+![Project Settings 1](https://github.com/hsuehyt/StageOfLightManifest/blob/main/Snapshots/ProjectSettings1.png)
+![Project Settings 2](https://github.com/hsuehyt/StageOfLightManifest/blob/main/Snapshots/ProjectSettings2.png)
 
 3. Open **Window > Package Manager**.
-4. In the **Packages** dropdown (top left), select **My Registries**.
-5. Verify that both **extOSC** and **KlakSpout** are listed as installed packages.
+4. In the **Packages** dropdown (top left), select **In Project** or **My Registries**.
+5. Verify that both **extOSC** and **KlakSpout** are listed under either "Packages: In Project" or "Packages: My Registries".
+
+You should see something like this:
+
+![In Project](https://github.com/hsuehyt/StageOfLightManifest/blob/main/Snapshots/In%20Project.png)
+![My Registries](https://github.com/hsuehyt/StageOfLightManifest/blob/main/Snapshots/My%20Registries.png)
 
 ---
 
