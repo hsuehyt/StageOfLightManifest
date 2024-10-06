@@ -10,12 +10,13 @@ For optimal performance and compatibility, it is recommended to use **Unity 2021
 
 ### Step 1: Update Your `manifest.json`
 
+In most cases, the default `manifest.json` file only contains a `"dependencies"` section. To install the **extOSC** and **KlakSpout** packages, you need to add a new section called `"scopedRegistries"` for Unity to locate the necessary registries.
+
 1. Open your Unity project folder.
 2. Navigate to the `Packages` directory.
 3. Open the `manifest.json` file with a text editor.
-4. **Do not erase your existing dependencies!** Add the following sections from this repository’s `manifest.json`:
+4. **Add the following section** at the top of your `manifest.json` to include the scoped registries for Keijiro and OpenUPM. Ensure it is placed before the `"dependencies"` section:
    
-   #### Scoped Registries Section:
    ```json
    {
      "scopedRegistries": [
@@ -29,19 +30,50 @@ For optimal performance and compatibility, it is recommended to use **Unity 2021
          "url": "https://package.openupm.com",
          "scopes": [ "com.iam1337.extosc" ]
        }
-     ]
+     ],
+   ```
+
+5. Next, inside the existing `"dependencies"` section, add the package dependencies for **extOSC** and **KlakSpout** like this:
+
+   ```json
+   "dependencies": {
+     "jp.keijiro.klak.spout": "2.0.3",
+     "com.iam1337.extosc": "1.19.7",
+     // Your existing dependencies remain here
    }
    ```
-   
-   #### Dependencies Section:
+
+6. **Important**: **Do not add `//` or any symbols** for comments inside the `manifest.json` file, as JSON does not support comments. Any such symbols will cause errors.
+
+7. **Final `manifest.json` Structure**: After editing, your `manifest.json` should have the following structure:
+
    ```json
    {
-     "jp.keijiro.klak.spout": "2.0.3",
-     "com.iam1337.extosc": "1.19.7"
+     "scopedRegistries": [
+       {
+         "name": "Keijiro",
+         "url": "https://registry.npmjs.com",
+         "scopes": [ "jp.keijiro" ]
+       },
+       {
+         "name": "package.openupm.com",
+         "url": "https://package.openupm.com",
+         "scopes": [ "com.iam1337.extosc" ]
+       }
+     ],
+     "dependencies": {
+       "jp.keijiro.klak.spout": "2.0.3",
+       "com.iam1337.extosc": "1.19.7",
+       // Your existing dependencies should stay here (without `//` or symbols)
+     }
    }
    ```
-   
-   - **Make sure to add this into the existing `"scopedRegistries"` and `"dependencies"` sections** of your `manifest.json`. Don’t overwrite the entire file to avoid losing important dependencies needed for your project.
+
+You can view an example of what your `manifest.json` file should look like here:
+
+![manifest.json example](https://github.com/hsuehyt/StageOfLightManifest/blob/main/Snapshots/manifest.png)
+
+8. **Do not erase your existing dependencies!** Simply add the new scoped registries and dependencies as shown above.
 
 ### Step 2: Restart Unity
 
